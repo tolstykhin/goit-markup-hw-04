@@ -46,10 +46,21 @@ body {
   padding-bottom: 94px;
 }
 .link {
+  display: block;
   text-decoration: none;
 }
 .list {
   list-style: none;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
 }
 
 /* Header */
@@ -124,14 +135,15 @@ body {
 /* Hero */
 
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
   background-color: var(--footer-bg-color);
   text-align: center;
 }
-.hero-container {
-  padding: 200px 240px;
-}
 .hero-title {
   margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
 
   max-width: 696px;
   font-weight: 900;
@@ -167,9 +179,6 @@ body {
 
 /* advantage */
 
-.advantages-title {
-  display: none;
-}
 .advantages-list {
   display: flex;
   min-width: 270px;
@@ -262,13 +271,9 @@ body {
 
 /*----------------- Portfolio -----------------*/
 
-.filter-title {
-  overflow: hidden;
-  font-size: 0px;
-}
 .filter-list {
   display: flex;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
   justify-content: center;
 }
 .filter-item:not(:last-child) {
@@ -306,7 +311,7 @@ body {
   margin-bottom: -30px;
 }
 .portfolio-item {
-  flex-basis: calc(100 / 3 - 30px);
+  flex-basis: calc(100% / 3 - 30px);
   margin-right: 30px;
   margin-bottom: 30px;
 }
@@ -333,15 +338,13 @@ body {
 
 /* Footer */
 .footer {
-  background-color: var(--footer-bg-color);
-}
-.footer-container {
   padding-top: 60px;
   padding-bottom: 60px;
+
+  background-color: var(--footer-bg-color);
 }
 .footer-logo {
   display: block;
-  max-width: 135px;
   margin-bottom: 20px;
 
   font-family: Raleway, sans-serif;
